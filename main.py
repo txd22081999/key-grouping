@@ -99,19 +99,8 @@ def main():
             diff = get_set_diff(mx_key_set[main_key], dc_key_set[main_key])
             if len(diff) > 0:
                 print(f"Difference in {main_key}: {diff}")
-            # else:
-            #     print("EQUAL")
-            # print(mx_key_set[main_key] - dc_key_set[main_key])
 
-    # print(len(set1 - set2))
-    # print(len(set1.difference(set2)))
-    # Dict = {}
-    # # Dict['Dict1'] = [1,2]
-    # Dict['Dict1'].insert(0, 4)
-    # # Dict['Dict1']['Sub1'] = 1
-    # # Dict['Dict1'] = arr
-    # Dict['Dict1'].append(3)
-    # print(Dict)
+    print(sorted(dc_main_keys))
 
 
 if __name__ == "__main__":

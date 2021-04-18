@@ -1,0 +1,100 @@
+// /* x.gv */
+// digraph mainmap {
+//   URL="http://www.research.att.com/base.html";
+//   command [URL="http://www.research.att.com/command.html"];
+//   command -> output [URL="colors.html"];
+// }
+
+// digraph g {
+//   graph [fontsize=20 labelloc="t" label="" splines=true overlap=false rankdir = "LR"];
+//   ratio = auto;
+//   "state0" [ style = "filled, bold" penwidth = 5 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #0</font></td></tr><tr><td align="left" port="r0">&#40;0&#41; s -&gt; &bull;e $ </td></tr><tr><td align="left" port="r1">&#40;1&#41; e -&gt; &bull;l '=' r </td></tr><tr><td align="left" port="r2">&#40;2&#41; e -&gt; &bull;r </td></tr><tr><td align="left" port="r3">&#40;3&#41; l -&gt; &bull;'*' r </td></tr><tr><td align="left" port="r4">&#40;4&#41; l -&gt; &bull;'n' </td></tr><tr><td align="left" port="r5">&#40;5&#41; r -&gt; &bull;l </td></tr></table>> ];
+//   "state1" [ style = "filled" penwidth = 1 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #1</font></td></tr><tr><td align="left" port="r3">&#40;3&#41; l -&gt; &bull;'*' r </td></tr><tr><td align="left" port="r3">&#40;3&#41; l -&gt; '*' &bull;r </td></tr><tr><td align="left" port="r4">&#40;4&#41; l -&gt; &bull;'n' </td></tr><tr><td align="left" port="r5">&#40;5&#41; r -&gt; &bull;l </td></tr></table>> ];
+//   "state2" [ style = "filled" penwidth = 1 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #2</font></td></tr><tr><td align="left" port="r4">&#40;4&#41; l -&gt; 'n' &bull;</td><td bgcolor="grey" align="right">=$</td></tr></table>> ];
+//   "state3" [ style = "filled" penwidth = 1 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #3</font></td></tr><tr><td align="left" port="r5">&#40;5&#41; r -&gt; l &bull;</td><td bgcolor="grey" align="right">=$</td></tr></table>> ];
+//   "state4" [ style = "filled" penwidth = 1 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #4</font></td></tr><tr><td align="left" port="r3">&#40;3&#41; l -&gt; '*' r &bull;</td><td bgcolor="grey" align="right">=$</td></tr></table>> ];
+//   "state5" [ style = "filled" penwidth = 1 fillcolor = "black" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="black"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #5</font></td></tr><tr><td align="left" port="r0"><font color="white">&#40;0&#41; s -&gt; e &bull;$ </font></td></tr></table>> ];
+//   "state6" [ style = "filled" penwidth = 1 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #6</font></td></tr><tr><td align="left" port="r1">&#40;1&#41; e -&gt; l &bull;'=' r </td></tr><tr><td align="left" port="r5">&#40;5&#41; r -&gt; l &bull;</td><td bgcolor="grey" align="right">$</td></tr></table>> ];
+//   "state7" [ style = "filled" penwidth = 1 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #7</font></td></tr><tr><td align="left" port="r1">&#40;1&#41; e -&gt; l '=' &bull;r </td></tr><tr><td align="left" port="r3">&#40;3&#41; l -&gt; &bull;'*' r </td></tr><tr><td align="left" port="r4">&#40;4&#41; l -&gt; &bull;'n' </td></tr><tr><td align="left" port="r5">&#40;5&#41; r -&gt; &bull;l </td></tr></table>> ];
+//   "state8" [ style = "filled" penwidth = 1 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #8</font></td></tr><tr><td align="left" port="r1">&#40;1&#41; e -&gt; l '=' r &bull;</td><td bgcolor="grey" align="right">$</td></tr></table>> ];
+//   "state9" [ style = "filled" penwidth = 1 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" label =<<table border="0" cellborder="0" cellpadding="3" bgcolor="white"><tr><td bgcolor="black" align="center" colspan="2"><font color="white">State #9</font></td></tr><tr><td align="left" port="r2">&#40;2&#41; e -&gt; r &bull;</td><td bgcolor="grey" align="right">$</td></tr></table>> ];
+  
+//   state0 -> state5 [ penwidth = 5 fontsize = 20 fontcolor = "black" label = "e" ];
+//   state0 -> state6 [ penwidth = 5 fontsize = 20 fontcolor = "black" label = "l" ];
+//   state0 -> state9 [ penwidth = 5 fontsize = 20 fontcolor = "black" label = "r" ];
+//   state0 -> state1 [ penwidth = 1 fontsize = 10 fontcolor = "grey28" label = "'*'" ];
+//   state0 -> state2 [ penwidth = 1 fontsize = 10 fontcolor = "grey28" label = "'n'" ];
+
+//   state1 -> state1 [ penwidth = 1 fontsize = 10 fontcolor = "grey28" label = "'*'" ];
+//   state1 -> state4 [ penwidth = 5 fontsize = 20 fontcolor = "black" label = "r" ];
+//   state1 -> state2 [ penwidth = 1 fontsize = 10 fontcolor = "grey28" label = "'n'" ];
+//   state1 -> state3 [ penwidth = 5 fontsize = 20 fontcolor = "black" label = "l" ];
+  
+//   state6 -> state7 [ penwidth = 1 fontsize = 10 fontcolor = "grey28" label = "'='" ];
+
+//   state7 -> state8 [ penwidth = 5 fontsize = 20 fontcolor = "black" label = "r" ];
+//   state7 -> state1 [ penwidth = 1 fontsize = 10 fontcolor = "grey28" label = "'*'" ];
+//   state7 -> state2 [ penwidth = 1 fontsize = 10 fontcolor = "grey28" label = "'n'" ];
+//   state7 -> state3 [ penwidth = 5 fontsize = 20 fontcolor = "black" label = "l" ];
+// }
+
+// > : &#62;
+
+
+digraph g {
+  graph [fontsize=20 labelloc="t" label="" splines=true overlap=false rankdir = "LR"];
+  ratio = auto;
+  "DC" [ 
+    style = "filled, bold" penwidth = 5 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" 
+    label =
+    <<table border="0" cellborder="0" cellpadding="3" bgcolor="white">
+      <tr><td bgcolor="black" align="center" colspan="2"><font color="white"># DC</font></td></tr>
+      <tr><td style="" align="left" port="r0"><b>endpoint_vn30 -&#62;</b> dict_vols df last_input dic_buysell df_parsed</td></tr>
+      <tr><td style="" align="left" port="r1"><b>endpoints -&#62;</b> vn30_snapshots ps_vps</td></tr>
+      <tr><td style="" align="left" port="r2"><b>fubon -&#62;</b> datasource</td></tr><tr>
+      <td style="" align="left" port="r3"><b>global_time -&#62;</b>  speed, today, is_simulating, start_timestamp_fake, locked, start_timestamp_real</td></tr>
+      <tr><td style="" align="left" port="r4"><b>globals -&#62;</b> today</td></tr>
+      <tr><td style="" align="left" port="r5"><b>hoseall -&#62;</b> tickdata</td></tr>
+      <tr><td style="" align="left" port="r6"><b>ioc -&#62;</b> latency</td></tr>
+      <tr><td style="" align="left" port="r7"><b>kis -&#62;</b> vn30</td></tr>
+      <tr><td style="" align="left" port="r8"><b>main -&#62;</b> arbit</td></tr>
+      <tr><td style="" align="left" port="r9"><b>ps -&#62;</b> ohlc</td></tr>
+      <tr><td style="" align="left" port="r10"><b>rest_endpoint -&#62;</b> "http://localhost:5001/ps-pressure-out"</td></tr>
+      <tr><td style="" align="left">"http://localhost:5010/suu-data-out"</td></tr>
+      <tr><td style="" align="left">"http://localhost:5000/api/hose-indicators-outbound"</td></tr>
+      <tr><td style="" align="left" port="r11"><b>stream -&#62;</b> vn30</td></tr>
+      <tr><td style="" align="left" port="r12"><b>suu_dashboard -&#62;</b> f1</td></tr>
+      <tr><td style="" align="left" port="r13"><b>systems -&#62;</b> waiting</td></tr>
+      <tr><td style="" align="left" port="r14"><b>thoathuan -&#62;</b> lasttime, table, last, shift, nnbuysell</td></tr>
+      <tr><td style="" align="left" port="r15"><b>weight -&#62;</b> vn30</td></tr>
+    </table>> ];
+
+  "MX" [ 
+    style = "filled, bold" penwidth = 5 fillcolor = "white" fontname = "Courier New" shape = "Mrecord" 
+    label =
+    <<table border="0" cellborder="0" cellpadding="3" bgcolor="white">
+      <tr><td bgcolor="black" align="center" colspan="2"><font color="white"># MX</font></td></tr>
+      <tr><td style="" align="left" port="r0"><b>endpoint_vn30 -&#62;</b> dict_vols df last_input dic_buysell df_parsed</td></tr>
+      <tr><td style="" align="left" port="r1"><b>endpoints -&#62;</b> vn30_snapshots ps_vps ps_last_raw df_orders</td></tr>
+      <tr><td style="" align="left" port="r2"><b>fubon -&#62;</b> datasource time snapshot</td></tr><tr>
+      <td style="" align="left" port="r3"><b>global_time -&#62;</b>  speed, today, is_simulating, start_timestamp_fake, locked, start_timestamp_real</td></tr>
+      <tr><td style="" align="left" port="r4"><b>globals -&#62;</b> today</td></tr>
+      <tr><td style="" align="left" port="r5"><b>hoseall -&#62;</b> tickdata tickdata_all tickdataall</td></tr>
+      <tr><td style="" align="left" port="r6"><b>ioc -&#62;</b> latency</td></tr>
+      <tr><td style="" align="left" port="r7"><b>kis -&#62;</b> vn30 tickdata</td></tr>
+      <tr><td style="" align="left" port="r8"><b>main -&#62;</b> arbit</td></tr>
+      <tr><td style="" align="left" port="r9"><b>ps -&#62;</b> ohlc</td></tr>
+      <tr><td style="" align="left" port="r10"><b>rest_endpoint -&#62;</b> "http://localhost:5001/ps-pressure-out"</td></tr>
+      <tr><td style="" align="left">"http://localhost:5010/suu-data-out"</td></tr>
+      <tr><td style="" align="left">"http://localhost:5000/api/hose-indicators-outbound"</td></tr>
+      <tr><td style="" align="left" port="r11"><b>stream -&#62;</b> vn30</td></tr>
+      <tr><td style="" align="left" port="r12"><b>suu_dashboard -&#62;</b> f1</td></tr>
+      <tr><td style="" align="left" port="r13"><b>systems -&#62;</b> waiting</td></tr>
+      <tr><td style="" align="left" port="r14"><b>thoathuan -&#62;</b> lasttime, table, last, shift, nnbuysell</td></tr>
+      <tr><td style="" align="left" port="r15"><b>weight -&#62;</b> vn30</td></tr>
+    </table>> ];
+  
+  DC -> MX [ penwidth = 2 fontcolor = "black"];
+
+}
+
