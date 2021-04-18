@@ -1,0 +1,66 @@
+{
+    "thoathuan": {
+        "last_time",
+        "table",
+        "last",
+        "shift",
+        "nnbuysell"
+    },
+    "stream": {
+        "vn30"
+    },
+    "kis": {
+        "vn30"
+    },
+    "weight": {
+        "vn30"
+    },
+    "endpoint_vn30": {
+        "dic_vols",
+        "df",
+        "last_input",
+        "dic_buysell",
+        "df_parsed"
+    },
+    "globals": {
+        "today"
+    },
+    "global_time": {
+        "speed",
+        "today",
+        "is_simulating",
+        "start_timestamp_fake",
+        "locked",
+        "start_timestamp_real"
+    },
+    "rest_endpoint": {
+        "http://localhost:5001/ps-pressure-out",
+        "http://localhost:5010/suu-data-out",
+        "http://localhost:5000/api/hose-indicators-outbound"
+    },
+    "systems": {
+        "waiting"
+    },
+    "main": {
+        "arbit"
+    },
+    "endpoints": {
+        "vn30_snapshots",
+        "ps_vps"
+    },
+    "suu_dashboard": {
+        "f1"
+    },
+    "fubon": {
+        "datasource"
+    },
+    "ps": {
+        "ohlc"
+    },
+    "ioc": {
+        "latency"
+    },
+    "hoseall": {
+        "tickdata"
+    }
+}
